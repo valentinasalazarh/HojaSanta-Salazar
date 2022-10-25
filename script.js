@@ -1,32 +1,35 @@
-let n;
-let valortotal1 = 0;
-let valortotal2 = 0;
-const valortotal = (a,b) => a + b
-const descuento = (a,b) => a * b
-const resta = (a,b) => a - b    
+let total1= 0;
+let total2= 0;
+let total3= 0;
+const valorTotal = (a,b,c) => a + b + c
 
-let opcion1 = Number(prompt("Bienvenida a Polett -Bienestar y Belleza- \n 1- Ingresar al carrito de servicios \n 2- Salir"))
-while (opcion1 != 2){
-    opcion1 = Number(prompt("1- Agregar productos/Consultar total \n 2- Salir"))
-    if(opcion1 == 1){
-        n = Number(prompt("elige los productos que quieres agregar: \n 1- Aretes de corazón: 18000 COP \n 2- Cadena en acero: 20000 COP \n 3- Total" ));
-        if (n == 1){
-            let cant1 = Number(prompt("¿Cuántos aretes quieres agregar"));
-                valortotal1 = 10000*cant1;
+let bienvenida = prompt('Bienvenida a Polett - Nail Spa. \n\n¿Quieres conocer nuestros servicios? \nIngresa "Si" para continuar');
+
+if (bienvenida == "si" || bienvenida == "Si" || bienvenida == "SI" || bienvenida == "sI"); {    
+    let nombre = (prompt("Primero queremos conocerte. ¿Cómo es tu nombre?"));
+    let continuar = Number(prompt("¡Hola "+nombre+"! Ahora, digita '1' para conocer nuestros servicios o digita '2' para salir"));
+    while(continuar != 2) {
+        let n = Number(prompt(nombre+" nos encanta tenerte aquí. Elige el servicio que deseas adquirir: \n1. Esmaltado tradicional manos: $20000 COP \n2. Esmaltado tradicional pies: $15000 COP \n3. Esmaltado semipermanente manos: $60000 COP \n4. Total \n5. Salir" ));
+        if(n==1){
+            let cantidad1 = Number(prompt("¡Ven con tus amigas! ¿Cuántos esmaltados tradicionales de manos deseas adquirir?"));
+            total1 = 20000*cantidad1;
         }
-        else if (n == 2){
-            let cant2 = Number(prompt("¿Cuántas cadenas quieres agregar"));
-                valortotal2 = 20000*cant2;
+        else if(n==2){
+            let cantidad2 = Number(prompt("¡Ven con tus amigas! ¿Cuántos esmaltados tradicionales de pies deseas adquirir?"));
+            total2 = 15000*cantidad2;
         }
-        else if (n == 3){
-            let Total = valortotal(valortotal1, valortotal2);
-            if (Total >= 200000){
-                let Descuento = resta(Total,descuento(Total,0.05));
-                alert("Valor total con descuento: "+ Descuento);
-            } else if(Total < 200000){
-                alert("Valor total: "+ Total);
+        else if(n==3){
+            let cantidad3 = Number(prompt("¡Ven con tus amigas! ¿Cuántos esmaltados semipermanentes de manos deseas adquirir?"));
+            total3 = 60000*cantidad3;
+        }
+        else if(n==4){
+            let total=valorTotal(total1,total2,total3);
+            if(total=total){
+                alert("Tu total es: $"+total+" COP");
             }
         }
-    }  
-   
-} 
+        else if (n==5){
+            
+        }
+    }
+}
