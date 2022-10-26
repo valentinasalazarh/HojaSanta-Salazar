@@ -29,7 +29,7 @@ if (bienvenida == "si" || bienvenida == "Si" || bienvenida == "SI" || bienvenida
             }
         }
         else if (n==5){
-            
+            break;
         }
     }
 }
