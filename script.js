@@ -1,44 +1,92 @@
-let total1= 0;
-let total2= 0;
-let total3= 0;
-const valorTotal = (a,b,c) => a + b + c
+function nuevoUsuario1() { 
+let nuevoUsuario = prompt('¡Hola! Bienvenidos a Hoja Santa. \nAquí encontrarás las mejores especias para tu cocina. \nQueremos conocerte, por favor ingresa tu nombre: ')
+    if((nuevoUsuario == '') || (nuevoUsuario == ' ')) {
+        alert('Debes ingresar un nombre para poder continuar')
+    }
+    else {
+        alert(`Gracias por estar aquí ${nuevoUsuario}`)
+    }
+}
+nuevoUsuario1();
 
-let bienvenidos = prompt('Bienvenidos a Hoja Santa, aquí encontrarás las mejores especias para tu cocina. \n\n¿Quieres conocer nuestros productos? \nIngresa "Si" para continuar');
-
-if (bienvenidos == "si" || bienvenidos == "Si" || bienvenidos == "SI" || bienvenidos == "sI"); {    
-    let nombre = (prompt("Primero queremos conocerte. ¿Cómo es tu nombre?"));
-    let continuar = Number(prompt("¡Hola "+nombre+"! Ahora, digita '1' para conocer nuestros productos o digita '2' para salir"));
-    while(continuar != 2) {
-        let n = Number(prompt(nombre+" nos encanta tenerte aquí. Elige el productos que deseas comprar: \n1. Pimienta negra: $40000 COP \n2. Chile seco: $15000 COP \n3. Azafrán en polvo: $10000 COP \n4. Total \n5. Salir" ));
-        if(n==1){
-            let cantidad1 = Number(prompt("¿Cuántos tarritos de pimienta deseas adquirir?"));
-            total1 = 40000*cantidad1;
-        }
-        else if(n==2){
-            let cantidad2 = Number(prompt("¿Cuántos tarritos de Chile seco deseas adquirir?"));
-            total2 = 15000*cantidad2;
-        }
-        else if(n==3){
-            let cantidad3 = Number(prompt("¿Cuántos tarritos de Azafrán en polvo deseas adquirir?"));
-            total3 = 10000*cantidad3;
-        }
-        else if(n==4){
-            let total=valorTotal(total1,total2,total3);
-            if(total=total){
-                alert("Tu total es: $"+total+" COP");
-            }
-        }
-        else if (n==5){
-            break;
-        }
+class Producto {
+    constructor(id, name, price, stock){
+        this.id = id
+        this.name = name
+        this.price = price
+        this.stock = stock
     }
 }
 
+const producto1 = new Producto (1,'Epazote', 30000, 2)
+const producto2 = new Producto (2,'Azafrán en polvo', 10000, 2)
+const producto3 = new Producto (3,'Pimienta Negra', 40000, 6)
+const producto4 = new Producto (4,'Chile seco', 15000, 0)
 
-// let productos=["Chile", "Epazote", "Azafran", "Pimienta", "Romero"] // 5...0-4
-// for(let i=0;i<productos.length;i++){
-//     console.log(productos[i]);
-// }
-// let productoGrande=[];
-// productoGrande[0]="Tamaño grande";
-// console.log(productoGrande)
+const PRODUCTOS=[producto1,producto2,producto3,producto4];
+let carro = [];
+let total = 0;
+
+// PRODUCTOS.forEach((prod) => alert(`Estos son nuestros productos: ${prod.name}`))
+let condition = 1;
+
+while(condition == 1){ 
+
+let compra = parseInt(prompt('Elige el productos que deseas comprar: \n1. Epazote: $30000 COP \n2. Azafrán en polvo: $10000 COP \n3. Pimienta negra: $40000 COP \n4. Chile seco: $15000 COP'))
+
+switch(compra){
+
+    case 1:
+        if(producto1.stock > 0 ){
+            carro.push(producto1);
+            total += producto1.price
+            producto1.stock -= 1;
+            alert(`Compraste ${producto1.name} quedó ${producto1.stock} en stock`)
+        }
+        else{
+            alert("No hay stock. Intenta mañana.")
+        }
+        break;
+    case 2:
+        if(producto2.stock > 0 ){
+            carro.push(producto2);
+            total += producto2.price
+            producto2.stock -= 1;
+            alert(`Compraste ${producto2.name} quedó ${producto2.stock} en stock`)
+        }
+        else{
+            alert("No hay stock. Intenta mañana.")
+        }
+        break;
+    case 3:
+        if(producto3.stock > 0 ){
+
+            carro.push(producto3);
+            total += producto3.price
+            producto3.stock -= 1;
+            alert(`Compraste ${producto3.name} quedó ${producto3.stock} de stock`)
+        }
+        else{
+            alert("No hay stock. Intenta mañana.")
+        }
+        break;
+    case 4:
+        if(producto4.stock > 0 ){
+
+            carro.push(producto4);
+            total += producto4.price
+            producto4.stock -= 1;
+            alert(`Compraste ${producto4.name} quedó ${producto4.stock} de stock`)
+        }
+        else{
+            alert("No hay stock. Intenta mañana.")
+        }
+        break;
+    }
+    condition = prompt('¿Quieres seguir comprando? \n1. Si \n2. No')
+
+    if(condition!=1){
+    alert(`Tu compra ha sido realizada con éxito😁, el total del monto es: $${carro.map(el => el.price).reduce(
+        (previousValue, currentValue) => previousValue + currentValue, 0)}`)
+    }
+}
