@@ -1,3 +1,5 @@
+//Nota mental: Usar comillas invertidas para concatenar
+
 function nuevoUsuario1() { 
 let nuevoUsuario = prompt('¡Hola! Bienvenidos a Hoja Santa. \nAquí encontrarás las mejores especias para tu cocina. \nQueremos conocerte, por favor ingresa tu nombre: ')
     if((nuevoUsuario == '') || (nuevoUsuario == ' ')) {
@@ -27,7 +29,6 @@ const PRODUCTOS=[producto1,producto2,producto3,producto4];
 let carro = [];
 let total = 0;
 
-// PRODUCTOS.forEach((prod) => alert(`Estos son nuestros productos: ${prod.name}`))
 let condition = 1;
 
 while(condition == 1){ 
