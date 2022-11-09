@@ -6,7 +6,7 @@ let nuevoUsuario = prompt('¡Hola! Bienvenidos a Hoja Santa. \nAquí encontrará
         alert('Debes ingresar un nombre para poder continuar')
     }
     else {
-        alert(`Gracias por estar aquí ${nuevoUsuario}`)
+        alert(`Amamos las especias y amamos conocerte ${nuevoUsuario}`)
     }
 }
 nuevoUsuario1();
