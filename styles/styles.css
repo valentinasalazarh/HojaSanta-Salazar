@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --clr-beige: #ede5de;
+    --clr-beige-oscuro: #ecdfd5;
+    --clr-botones: #e0d0c2;
+    --clr-cafe: #8e7867;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--clr-beige);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+p, a, textarea, ul, input {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    font-size: 10px;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+button {
+    background-color: var(--clr-cafe);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 300;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+button:hover {
+    background-color: var(--clr-botones);
+    color: #000;
+}
+.separador {
+    background-color: var(--clr-cafe);
+    padding: 5px;
+}
+
+/* Header */
+/* Descuento */
+.descuento {
+    background-color: var(--clr-cafe);
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 9px;
+}
+/* Logo */
+.logo-principal {
+    width: 110px;
+    background-color: var(--clr-beige-oscuro);
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+}
+/* Navegación hamburguesa */
+.boton-hamburguesa {
+    border: none;
+    padding: 10px;
+    background-color: var(--clr-botones);
+    border-radius: 7px;
+    position: absolute;
+    top: -160px;
+    right: 15px;
+}
+.boton-hamburguesa:hover {
+    background-color: var(--clr-cafe);
+}
+.links-menu a {
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+}
+.links-menu a:hover {
+    background-color: var(--clr-botones);
+    color: #000;
+    padding: 10px;
+}
+/* Navegación desktop */
+.nav-principal {
+    display: none;
+}
+/* Nav tienda */
+.tienda ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.tienda li {
+    padding: 5px;
+}
+.tienda img{
+    width: 20px;
+}
+.boton-carrito span {
+    color: #000;
+}
+/* Primera sección */
+.primera-seccion {
+    display: grid;
+}
+.primera-seccion img {
+    width: 100%;
+    padding-top: 20px;
+}
+.primera-seccion-derecha {
+    padding: 50px;
+    text-align: center;
+    display: grid;
+    gap: 20px;
+}
+.primera-seccion-derecha h1 {
+    font-weight: 100;
+    text-transform: uppercase;
+}
+.productos-inicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px;
+}
+.producto-imagen{
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+.producto-detalles {
+    text-align: center;
+    background-color: var(--clr-beige-oscuro);
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+}
+.producto-titulo {
+    font-weight: 400;
+    font-size: 15px;
+}
+.add-to-cart {
+    margin-top: 5px;
+    background-color: transparent;
+    border-bottom: solid 0.5px;
+    border-radius: 0;
+    color: #000;
+}
+.tercera-seccion {
+    display: grid;
+}
+.parrafo-principal-cultivos {
+    background-image: url(../images/fondo-cultivos.jpg);
+    background-size: cover;
+    color: #fff;
+    font-size: 20px;
+    padding: 50px;
+}
+.preguntas-frecuentes {
+    padding: 50px;
+    background-color: var(--clr-beige-oscuro);
+}
+.pregunta-frecuente {
+    padding: 10px;
+}
+.pregunta-frecuente h6 {
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+footer {
+    padding: 30px;
+}
+.footer-lado-derecho {
+    display: grid;
+    gap: 20px;
+}
+.formulario-suscripcion input {
+    background-color: transparent;
+    border: none;
+}
+form {
+    display: grid;
+    gap: 10px;
+}
+form .email {
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 0.5px;
+    padding: 10px;
+}
+.terminos-y-condiciones{
+    display: grid;
+    gap: 20px;
+}
+.terminos-y-condiciones p {
+    font-size: 8px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: normal;
+}
+.terminos-y-condiciones a {
+    font-size: 8px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: normal;
+}
+.nav-footer {
+    margin-top: 20px;
+}
+.documentacion img{
+    margin-top: 20px;
+    width: 100px;
+}
+
+@media screen and (min-width: 992px) {
+    
+    /* Navbar en desktop */
+    header {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+    }
+    .boton-hamburguesa {
+        display: none;
+    }
+    .hamburguesa {
+        display: none;
+    }
+    .nav-principal {
+        display: grid;
+        position: fixed;
+        top: 80px;
+        z-index: 100;
+        left: 0;
+    }
+    .links-navegacion {
+        display: flex;
+        list-style-type: none;
+        background-color: var(--clr-beige);
+        padding: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    .links-navegacion a {
+        padding: 10px;
+        color: #000;
+        font-size: 10px;
+    }
+    .links-navegacion a:hover {
+        border-bottom: solid 0.5px;
+    }
+    .tienda {
+        background-color: var(--clr-beige);
+        width: 15%;
+        padding: 10px;
+        border-radius: 10px;
+        position: fixed;
+        top: 45px;
+        right: 10px;
+    }
+    .primera-seccion {
+        grid-template-columns: 2fr 1fr;
+    }
+    .primera-seccion-derecha {
+        background-image: url(../images/fondo-principal.png);
+        background-size: cover;
+        margin-left: -100px;
+        padding: 150px 110px 150px 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .separador {
+        padding: 15px;
+    }
+    .productos-inicio {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .detalles-1 {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        text-align: left;
+        gap: 50px;
+        width: 100%;
+    }
+    .add-to-cart {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        width: 100%;
+        border-bottom: solid 0.5px;
+        border-top: solid 0.5px;
+    }
+    .tercera-seccion {
+        grid-template-columns: 1fr 2fr;
+    }
+    .parrafo-principal-cultivos {
+        display: flex;
+        align-items: center;
+    }
+    .preguntas-frecuentes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "suscribe . navfooter"
+        "suscribe documentacion documentacion";
+        padding-bottom: 50px;
+    }
+    .footer-lado-derecho {
+        grid-area: suscribe;
+    }
+    .nav-footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-area: navfooter;
+    }
+    .documentacion {
+        display: grid;
+        grid-area: documentacion;
+        justify-items: end;
+    }
+    .documentacion-links {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+}

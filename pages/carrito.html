@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <title>Hoja Santa | Spices</title>
+        <link rel="stylesheet" href="../styles/styles.css">
+
+    </head>
+    <body>
+
+        <!-- header -->
+        <header>
+
+            <p>10% de descuento en referencias seleccionadas* + Pimienta 250 gr. GRATIS para pedidos de más de $200.000 COP</p>
+            <a href=""><img src="../images/logo-color.svg" alt="Logo principal de Hoja Santa"></a>
+            <!-- Nav principal -->
+            <nav class="principal">
+                <ul>
+                    <li><a href="">¿Quiénes somos?</a></li>
+                    <li><a href="">Nuestros cultivos</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </nav>
+            <!-- Nav tienda -->
+            <nav class="tienda">
+                <ul>
+                    <li>
+                        <a href=""><img src="../images/icono-buscar.svg" alt="icono de buscar"></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../images/icono-wishlist.svg" alt="icono de wishlist"></a>
+                    </li>
+                    <li>
+                        <a class="boton-carrito" href="./pages/carrito.html"><img src="./images/icono-carrito.svg" alt="icono de carrito"><span class="cantidad-carrito">0</span></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="../images/icono-mi-cuenta.svg" alt="icono de mi cuenta"></a>
+                    </li>
+                    <li>
+                        <a href=""><button>SHOP</button></a>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <!-- Main -->
+        <main>
+            <h2>Carrito</h2>
+            <div class="contenedor-carrito">
+                <p class="carritovacio">Tu carrito está vacío</p>
+            </div>
+            <div class="carrito-productos">
+                <div class="carrito-producto">
+                    <img src="../images/productos/1-pimienta-negra-L.jpg" alt="">
+                    <div class="carrito-producto-titulo">
+                        <small>Título</small>
+                        <h3>Pimienta Negra | L</h3>
+                    </div>
+                    <div class="carrito-producto-cantidad">
+                        <small>Cantidad</small>
+                        <p>1</p>
+                    </div>
+                    <div class="carrito-producto-precio">
+                        <small>Precio</small>
+                        <p>$40000 COP</p>
+                    </div>
+                    <div class="carrito-producto-subtotal">
+                        <small>Subtotal</small>
+                        <p>$40000 COP</p>
+                    </div>
+                    <button class="carrito-producto-eliminar">
+                        <img src="../images/icono-delete.svg" alt="icono de eliminar">
+                    </button>
+                </div>
+            </div>
+
+            <div id="carrito-acciones" class="carrito-acciones disabled">
+                <div class="carrito-acciones-izquierda">
+                    <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">Vaciar carrito</button>
+                </div>
+                <div class="carrito-acciones-derecha">
+                    <div class="carrito-acciones-total">
+                        <p>Total:</p>
+                        <p id="total">$3000</p>
+                    </div>
+                    <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Comprar ahora</button>
+                </div>
+            </div>
+
+            <p id="carrito-comprado" class="carrito-comprado disabled">Gracias por tu compra.</p>
+
+            <button><a href="../index.html">Seguir comprando</a></button>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div>
+                <p>¡Sigamos en contacto! Regístrate para obtener un 10 % de descuento.</p>
+                <form action="">
+                    <input type="email" name="email" id="email">
+                    <input type="submit" name="Enviar" id="Enviar">
+                </form>
+                <p>Al suscribirte, aceptas recibir mensajes de correo electrónico de marketing de Hoja Santa en la dirección de correo electrónico proporcionada. Puedes cancelar tu suscripción en cualquier momento. Ver nuestra Política de Privacidad y Términos de Servicio.</p>
+                <p>*El 10% de descuento en referencias seleccionadas se aplica automáticamente a los productos del carrito al finalizar la compra con el código HOJASANTA10. El código HOJASANTA10 excluye combos y visitas a los cultivos. No se puede aplicar a pedidos anteriores ni combinar con otros códigos de descuento.</p>
+                <p>El obsequio gratuito solo estará disponible para pedidos que excedan los $200.000 COP después de los descuentos y antes del envío y los impuestos. La oferta termina el 22/03/2023 a las 11:59 p. m. o hasta agotar existencias.</p>
+            </div>
+            <div class="nav-footer">
+                <div>
+                    <p><strong>SOBRE NOSOTROS</strong></p>
+                    <ul>
+                        <li>Nuestros cultivos</li>
+                        <li>PQRs</li>
+                        <li>Envíos</li>
+                        <li>Devoluciones</li>
+                        <li>Contacto</li>
+                    </ul>
+                </div>
+                <div>
+                    <p><strong>SOCIAL</strong></p>
+                    <ul>
+                        <li>Instagram</li>
+                        <li>Tiktok</li>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+                <div>
+                    <p><strong>PAÍS</strong></p>
+                    <p>Colombia</p>
+                </div>
+            </div>
+            <div>
+                <img src="../images/logo-footer.svg" alt="logo hoja santa horizontal">
+                <div>
+                    <a href="">TÉRMINOS & CONDICIONES</a>
+                    <a href="">POLÍTICA DE PRIVACIDAD</a>
+                    <a href="">ACCESIBILIDAD</a>
+                    <p>© 2022, HOJA SANTA</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+
+    <!-- JavaScript -->
+    <script src="../script.js"></script>
+</html>
