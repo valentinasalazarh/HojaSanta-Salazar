@@ -1,4 +1,95 @@
+//Productos
+const productos = [
+    //Especias grandes
+    {
+        id: "pimientaNegraL",
+        titulo: "Pimienta Negra | L",
+        imagen: "./images/productos/1-pimienta-negra-L.jpg",
+        categoria: {
+            nombre: "Especias grandes",
+            id: "especiasGrandes",
+        },
+        precio: "40000"
+    },
+    {
+        id: "pimientaRojaL",
+        titulo: "Pimienta Roja | L",
+        imagen: "./images/productos/2-pimienta-roja.jpg",
+        categoria: {
+            nombre: "Especias grandes",
+            id: "especiasGrandes",
+        },
+        precio: "50000"
+    },
+    {
+        id: "epazoteL",
+        titulo: "Epazote | L",
+        imagen: "./images/productos/3-epazote-L.jpg",
+        categoria: {
+            nombre: "Especias grandes",
+            id: "especiasGrandes",
+        },
+        precio: "30000"
+    },
+    {
+        id: "azafranPolvoL",
+        titulo: "Azafrán en polvo | L",
+        imagen: "./images/productos/4-azafran-polvo.jpg",
+        categoria: {
+            nombre: "Especias grandes",
+            id: "especiasGrandes",
+        },
+        precio: "10000"
+    },
+    //Especias medianas
+    {
+        id: "epazoteM",
+        titulo: "Epazote | M",
+        imagen: "./images/productos/5-epazote-M.jpg",
+        categoria: {
+            nombre: "Especias medianas",
+            id: "especiasMedianas",
+        },
+        precio: "20000"
+    },
+    {
+        id: "chileSecoM",
+        titulo: "Chile Seco | M",
+        imagen: "./images/productos/6-chile-seco.jpg",
+        categoria: {
+            nombre: "Especias medianas",
+            id: "especiasMedianas",
+        },
+        precio: "15000"
+    },
+    {
+        id: "pimientaNegraM",
+        titulo: "Pimienta Negra | M",
+        imagen: "./images/productos/7-pimienta.negra-M.jpg",
+        categoria: {
+            nombre: "Especias medianas",
+            id: "especiasMedianas",
+        },
+        precio: "20000"
+    },
+    //Accesorios
+    {
+        id: "bolsasEcologicas",
+        titulo: "Bolsas Ecológicas | 3 u",
+        imagen: "./images/productos/8-bolsas-eco.jpg",
+        categoria: {
+            nombre: "Accesorios",
+            id: "accesorios",
+        },
+        precio: "100000"
+    }
+]
 
+const contenedorProductos = document.querySelector("#contenedor-productos");
+
+function cargarProductos () {
+    
+}
 
 
 
