@@ -17,16 +17,48 @@
         <!-- header -->
         <header>
 
-            <p>10% de descuento en referencias seleccionadas* + Pimienta 250 gr. GRATIS para pedidos de más de $200.000 COP</p>
-            <a href=""><img src="../images/logo-color.svg" alt="Logo principal de Hoja Santa"></a>
+            <p class="descuento">10% de descuento en referencias seleccionadas* + Pimienta 250 gr. GRATIS para pedidos de más de $200.000 COP</p>
+            <a href=""><img class="logo-principal" src="../images/logo-color.svg" alt="Logo principal de Hoja Santa"></a>
+            
             <!-- Nav principal -->
-            <nav class="principal">
-                <ul>
+
+            <!-- MENÚ HAMBURGUESA -->
+            <div class="hamburguesa col-12">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <button class="boton-hamburguesa" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="20" height="20" viewBox="0 0 24 24" stroke-width="1" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <line x1="4" y1="8" x2="20" y2="8" />
+                                <line x1="4" y1="16" x2="20" y2="16" />
+                            </svg>
+                        </button>
+                        <div class="links-menu collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/quienes-somos.html">¿Quiénes somos?</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/cultivos.html">Nuestros cultivos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Nav principal desktop -->
+            <nav class="nav-principal">
+                <ul class="links-navegacion">
                     <li><a href="">¿Quiénes somos?</a></li>
                     <li><a href="">Nuestros cultivos</a></li>
                     <li><a href="">Contacto</a></li>
                 </ul>
             </nav>
+
             <!-- Nav tienda -->
             <nav class="tienda">
                 <ul>
@@ -37,13 +69,13 @@
                         <a href=""><img src="../images/icono-wishlist.svg" alt="icono de wishlist"></a>
                     </li>
                     <li>
-                        <a class="boton-carrito" href="./pages/carrito.html"><img src="./images/icono-carrito.svg" alt="icono de carrito"><span class="cantidad-carrito">0</span></a>
+                        <a class="boton-carrito" href="../pages/carrito.html"><img src="../images/icono-carrito.svg" alt="icono de carrito"><span class="cantidad-carrito">0</span></a>
                     </li>
                     <li>
                         <a href=""><img src="../images/icono-mi-cuenta.svg" alt="icono de mi cuenta"></a>
                     </li>
                     <li>
-                        <a href=""><button>SHOP</button></a>
+                        <a href=""><button class="boton-tienda">SHOP</button></a>
                     </li>
                 </ul>
             </nav>
@@ -51,7 +83,7 @@
         </header>
 
         <!-- Main -->
-        <main>
+        <main class="carrito">
             <h2>Carrito</h2>
             <div class="contenedor-carrito">
                 <p class="carritovacio">Tu carrito está vacío</p>
@@ -101,15 +133,17 @@
 
         <!-- Footer -->
         <footer>
-            <div>
+            <div class="footer-lado-derecho">
                 <p>¡Sigamos en contacto! Regístrate para obtener un 10 % de descuento.</p>
-                <form action="">
-                    <input type="email" name="email" id="email">
-                    <input type="submit" name="Enviar" id="Enviar">
+                <form class="formulario-suscripcion" action="">
+                    <input class="email" type="email" name="email" id="email">
+                    <button class="boton-formulario"><input type="submit" name="Enviar" id="Enviar"></button>
                 </form>
-                <p>Al suscribirte, aceptas recibir mensajes de correo electrónico de marketing de Hoja Santa en la dirección de correo electrónico proporcionada. Puedes cancelar tu suscripción en cualquier momento. Ver nuestra Política de Privacidad y Términos de Servicio.</p>
-                <p>*El 10% de descuento en referencias seleccionadas se aplica automáticamente a los productos del carrito al finalizar la compra con el código HOJASANTA10. El código HOJASANTA10 excluye combos y visitas a los cultivos. No se puede aplicar a pedidos anteriores ni combinar con otros códigos de descuento.</p>
-                <p>El obsequio gratuito solo estará disponible para pedidos que excedan los $200.000 COP después de los descuentos y antes del envío y los impuestos. La oferta termina el 22/03/2023 a las 11:59 p. m. o hasta agotar existencias.</p>
+                <div class="terminos-y-condiciones">
+                    <p>Al suscribirte, aceptas recibir mensajes de correo electrónico de marketing de Hoja Santa en la dirección de correo electrónico proporcionada. Puedes cancelar tu suscripción en cualquier momento. <a href="">Ver nuestra <strong>Política de Privacidad y Términos de Servicio.</strong></a></p>
+                    <p>*El 10% de descuento en referencias seleccionadas se aplica automáticamente a los productos del carrito al finalizar la compra con el código HOJASANTA10. El código HOJASANTA10 excluye combos y visitas a los cultivos. No se puede aplicar a pedidos anteriores ni combinar con otros códigos de descuento.</p>
+                    <p>El obsequio gratuito solo estará disponible para pedidos que excedan los $200.000 COP después de los descuentos y antes del envío y los impuestos. La oferta termina el 22/03/2023 a las 11:59 p. m. o hasta agotar existencias.</p>
+                </div>
             </div>
             <div class="nav-footer">
                 <div>
@@ -137,9 +171,9 @@
                     <p>Colombia</p>
                 </div>
             </div>
-            <div>
+            <div class="documentacion">
                 <img src="../images/logo-footer.svg" alt="logo hoja santa horizontal">
-                <div>
+                <div class="documentacion-links">
                     <a href="">TÉRMINOS & CONDICIONES</a>
                     <a href="">POLÍTICA DE PRIVACIDAD</a>
                     <a href="">ACCESIBILIDAD</a>
