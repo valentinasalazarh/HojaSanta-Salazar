@@ -69,7 +69,7 @@
                         <a href=""><img src="../images/icono-wishlist.svg" alt="icono de wishlist"></a>
                     </li>
                     <li>
-                        <a class="boton-carrito" href="../pages/carrito.html"><img src="../images/icono-carrito.svg" alt="icono de carrito"><span class="cantidad-carrito">0</span></a>
+                        <a class="boton-carrito" href="../pages/carrito.html"><img src="../images/icono-carrito.svg" alt="icono de carrito"><span id="numerito" class="cantidad-carrito">0</span></a>
                     </li>
                     <li>
                         <a href=""><img src="../images/icono-mi-cuenta.svg" alt="icono de mi cuenta"></a>
@@ -84,51 +84,80 @@
 
         <!-- Main -->
         <main class="carrito">
-            <h2>Carrito</h2>
+
+            <h5 id="titulo-carrito">Carrito</h5>
+
             <div class="contenedor-carrito">
-                <p class="carritovacio">Tu carrito está vacío</p>
-            </div>
-            <div class="carrito-productos">
-                <div class="carrito-producto">
-                    <img src="../images/productos/1-pimienta-negra-L.jpg" alt="">
-                    <div class="carrito-producto-titulo">
-                        <small>Título</small>
-                        <h3>Pimienta Negra | L</h3>
+
+                <p class="carrito-vacio">Tu carrito está vacío</p>
+
+                <div class="carrito-productos disabled">
+                    <div class="carrito-producto">
+                        <img class="carrito-producto-imagen" src="../images/productos/1-pimienta-negra-L.jpg" alt="">
+                        <div class="carrito-producto-titulo">
+                            <small>Título</small>
+                            <h6>Pimienta Negra | L</h6>
+                        </div>
+                        <div class="carrito-producto-cantidad">
+                            <small>Cantidad</small>
+                            <p>1</p>
+                        </div>
+                        <div class="carrito-producto-precio">
+                            <small>Precio</small>
+                            <p>$40000 COP</p>
+                        </div>
+                        <div class="carrito-producto-subtotal">
+                            <small>Subtotal</small>
+                            <p>$40000 COP</p>
+                        </div>
+                        <button class="carrito-producto-eliminar">
+                            <img class="icono-eliminar" src="../images/icono-delete.svg" alt="icono de eliminar">
+                        </button>
                     </div>
-                    <div class="carrito-producto-cantidad">
-                        <small>Cantidad</small>
-                        <p>1</p>
+                    <div class="carrito-producto">
+                        <img class="carrito-producto-imagen" src="../images/productos/1-pimienta-negra-L.jpg" alt="">
+                        <div class="carrito-producto-titulo">
+                            <small>Título</small>
+                            <h6>Pimienta Negra | L</h6>
+                        </div>
+                        <div class="carrito-producto-cantidad">
+                            <small>Cantidad</small>
+                            <p>1</p>
+                        </div>
+                        <div class="carrito-producto-precio">
+                            <small>Precio</small>
+                            <p>$40000 COP</p>
+                        </div>
+                        <div class="carrito-producto-subtotal">
+                            <small>Subtotal</small>
+                            <p>$40000 COP</p>
+                        </div>
+                        <button class="carrito-producto-eliminar">
+                            <img class="icono-eliminar" src="../images/icono-delete.svg" alt="icono de eliminar">
+                        </button>
                     </div>
-                    <div class="carrito-producto-precio">
-                        <small>Precio</small>
-                        <p>$40000 COP</p>
-                    </div>
-                    <div class="carrito-producto-subtotal">
-                        <small>Subtotal</small>
-                        <p>$40000 COP</p>
-                    </div>
-                    <button class="carrito-producto-eliminar">
-                        <img src="../images/icono-delete.svg" alt="icono de eliminar">
-                    </button>
                 </div>
+
+                <div id="carrito-acciones" class="carrito-acciones disabled">
+                    <div class="carrito-acciones-izquierda">
+                        <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">Vaciar carrito</button>
+                    </div>
+                    <div class="carrito-acciones-derecha">
+                        <div class="carrito-acciones-total">
+                            <p><strong>Total:</strong></p>
+                            <h6 id="total">$30000 COP</h6>
+                        </div>
+                        <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Comprar ahora</button>
+                    </div>
+                </div>
+
             </div>
 
-            <div id="carrito-acciones" class="carrito-acciones disabled">
-                <div class="carrito-acciones-izquierda">
-                    <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">Vaciar carrito</button>
-                </div>
-                <div class="carrito-acciones-derecha">
-                    <div class="carrito-acciones-total">
-                        <p>Total:</p>
-                        <p id="total">$3000</p>
-                    </div>
-                    <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Comprar ahora</button>
-                </div>
+            <div class="gracias-compra">
+                <p id="carrito-comprado" class="carrito-comprado disabled">Gracias por tu compra.</p>
+                <button><a id="seguir-comprando" href="../index.html">Seguir comprando</a></button>
             </div>
 
-            <p id="carrito-comprado" class="carrito-comprado disabled">Gracias por tu compra.</p>
-
-            <button><a href="../index.html">Seguir comprando</a></button>
         </main>
 
         <!-- Footer -->
@@ -187,5 +216,5 @@
     </body>
 
     <!-- JavaScript -->
-    <script src="../script.js"></script>
+    <script src="../JS/carrito.js"></script>
 </html>
