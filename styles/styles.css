@@ -66,6 +66,8 @@ button:hover {
     text-align: center;
     color: #fff;
     font-size: 9px;
+    position: fixed;
+    width: 100%;
 }
 /* Logo */
 .logo-principal {
@@ -316,13 +318,15 @@ form .email {
 @media screen and (min-width: 992px) {
     
     /* Navbar en desktop */
-    header {
+    /* header {
         position: fixed;
         top: 0px;
         width: 100%;
-    }
+    } */
     .logo-principal {
         margin-left: 30px;
+        position: fixed;
+        
     }
     .menu-categorias {
         display: flex;
