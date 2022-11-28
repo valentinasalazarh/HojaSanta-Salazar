@@ -252,7 +252,6 @@ form .email {
 /* Carrito */
 .carrito-vacio {
     color: #000;
-    display: none;
 }
 .carrito {
     padding: 40px;
@@ -309,6 +308,9 @@ form .email {
     display: block;
     margin: 0 auto;
     margin-bottom: 20px;
+}
+.disabled {
+    display: none;
 }
 
 @media screen and (min-width: 992px) {
@@ -458,5 +460,8 @@ form .email {
         padding-top: 12px;
         margin-top: 0px;
         border: none;
+    }
+    .disabled {
+        display: none;
     }
 }
